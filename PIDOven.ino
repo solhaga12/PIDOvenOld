@@ -1,6 +1,6 @@
 /*
 
-** NOTE: Tested on Arduino Nano whose I2C pins are A4==SDA, A5==SCL
+** NOTE: Tested on Arduino Nano (nanoatmega328) whose I2C pins are A4==SDA, A5==SCL
 
 */
 #include <Wire.h>
