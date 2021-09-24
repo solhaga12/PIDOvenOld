@@ -1,11 +1,12 @@
-
 /*
 
 ** NOTE: Tested on Arduino Nano whose I2C pins are A4==SDA, A5==SCL
 
 */
 #include <Wire.h>
-#include <LCD.h>
+#include <DHT.h>
+#include <DHT_U.h>
+//#include <LCD.h>
 #include <LiquidCrystal_I2C.h>
 
 #define I2C_ADDR    0x3F // Address found with I2C Scanner
@@ -22,9 +23,8 @@
 #define CLEAR "                "
 int n = 1;
 
-LiquidCrystal_I2C	lcd(I2C_ADDR, En_pin, Rw_pin, Rs_pin, D4_pin, D5_pin, D6_pin, D7_pin);
+LiquidCrystal_I2C	lcd(I2C_ADDR, 16, 2);
 
-#include <dht.h>
 #define DHT_PIN 2
 #define DHTTYPE DHT11
 DHT dht(DHT_PIN, DHTTYPE);
